@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/05/2015, 09:36:59
+    Author     : carlos.bruno
+*/
+
+table{
+    font-family: "Tahoma","Arial";
+    font-weight: bold;
+  //  font-size: small;
+}
+#tabela{
+    
+    position: relative;
+    left: -2px; /* posiciona a 90px para a esquerda */ 
+    top: 3px; /* posiciona a 70px para baixo */
+
+}
+
+#corpo{
+    font-size: 24.5px;
+}
+
+body{
+    width: 100%;
+}
+.par{
+    color: #d5e6ef;
+}
+#titulo{
+    background:  #009acc;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    
+    
+}
