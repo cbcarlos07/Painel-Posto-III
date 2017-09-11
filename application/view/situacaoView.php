@@ -54,9 +54,12 @@ and open the template in the editor.
                                        <tr id="titulo" height="50">
                                            <td >PACIENTE</TD><TD WIDTH=150> LEITO</TD><TD>M&Eacute;DICO</TD><TD>PRESCRIÇÃO</TD><TD>PARECER</TD> 
                                            <TD>JEJUM</TD><TD>ISOLAMENTO</TD> 
-                                           <TD>MEWS</td> 
+                                           <TD>ADES&Atilde;O MEWS</td>
+                                           <TD>MEWS > 4</td>
                                            <TD>SEPSE</td> 
-                                           <TD>ALTA</td> 
+
+                                           <TD>USA MEDICAMENTO</td>
+                                           <TD>ALTA</td>
                                       </tr>
                                         <tbody>          
                                         <?php
@@ -266,9 +269,11 @@ and open the template in the editor.
                                                 echo "<td align=center>".$sp->getStrParecer()."</td>"; 
                                                 echo "<td align=center>".$sp->getJejum()."</td>";        
                                                 echo "<td align=center>".$sp->getIsolamento()."</td>"; 
-                                                echo "<td align=center>".$sp->getMews()."</td>";                                                 
-                                                echo "<td align=center>".$sp->getSepse()."</td>";   
-                                                echo "<td align=center>".$sp->getPrevisao()."</td>"; 
+                                                echo "<td align=center>".$sp->getMews()."</td>";
+                                                echo "<td align=center>".$sp->getScore()."</td>";
+                                                echo "<td align=center>".$sp->getSepse()."</td>";
+                                                echo "<td align=center>".$sp->getUsaMed()."</td>";
+                                                echo "<td align=center>".$sp->getPrevisao()."</td>";
                                                 echo "</tr>";
                                                 
                                             }
@@ -285,3 +290,21 @@ and open the template in the editor.
                            
            
 </html>
+<?php
+
+// Abre ou cria o arquivo bloco1.txt
+// "a" representa que o arquivo é aberto para ser escrito
+$fp = fopen("C:\portal.txt", "a");
+ 
+// Escreve "exemplo de escrita" no bloco1.txt
+setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Manaus');
+$dia_hoje = date('d');
+$ano_hoje = date('Y');
+$hora_hoje = date('H:i:s');
+$data =  'Manaus, '.ucfirst(gmstrftime('%A')).', '.$dia_hoje.' de '.ucfirst(gmstrftime('%B')).' '.$ano_hoje.' '.$hora_hoje;
+$texto = "Última atualização do painel: $data";
+$escreve = fwrite($fp, "\r\n".$texto);
+ 
+// Fecha o arquivo
+fclose($fp);//-> OK

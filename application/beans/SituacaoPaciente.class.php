@@ -22,6 +22,48 @@ class SituacaoPaciente {
      private $mews;
      private $sepse;
      private $previsao;
+     private $usa_med;
+     private $score;
+
+    /**
+     * @return mixed
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
+
+    /**
+     * @param mixed $score
+     * @return SituacaoPaciente
+     */
+    public function setScore($score)
+    {
+        $this->score = $score;
+        return $this;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getUsaMed()
+    {
+        return $this->usa_med;
+    }
+
+    /**
+     * @param mixed $usa_med
+     * @return SituacaoPaciente
+     */
+    public function setUsaMed($usa_med)
+    {
+        $this->usa_med = $usa_med;
+        return $this;
+    }
+
+
      
      public function getPrevisao() {
          return $this->previsao;

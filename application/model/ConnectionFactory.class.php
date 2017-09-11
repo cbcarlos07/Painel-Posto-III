@@ -1,10 +1,10 @@
 <?php   
 class ConnectionFactory{
-    private $ora_user = "login"; 
-    private $ora_senha = "senha"; 
+    private $ora_user = "login";
+    private $ora_senha = "senha";
     private $ora_bd = "(DESCRIPTION=
                         (ADDRESS_LIST=
-                        (ADDRESS=(PROTOCOL=TCP)(HOST=ip)(PORT=1521))
+                        (ADDRESS=(PROTOCOL=TCP)(HOST=IP-SERVER)(PORT=1521))
                         )
                         (CONNECT_DATA=
                         (SERVICE_NAME=servico)
