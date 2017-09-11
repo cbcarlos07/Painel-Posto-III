@@ -10,7 +10,7 @@ class ConnectionFactory{
                         (SERVICE_NAME=servico)
                         )
                         )";
-    
+
     public  function  getConnection(){
             $ora_conexao = oci_connect($this->ora_user, $this->ora_senha, $this->ora_bd);
         return $ora_conexao;
